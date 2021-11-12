@@ -1,5 +1,6 @@
 import Main from "./components/Main/Main";
 import About from "./components/About/About";
+import Copyright from "./components/Copyright/Copyright";
 
 import { useEffect } from "react";
 import Aos from "aos";
@@ -34,12 +35,24 @@ function App() {
 
       <About
         title="Who am I?"
-        text="Hello World!"
+        text="Hassan. A humble writer and Programmer.
+        I like coffee, ice-creams & Cold Drinks. I am also a a story-teller and a voice-over man. I guess that's me :D"
         image={profilePic}
         id="about"
         next="main"
         nextBtnFunction={changeSection}
       />
+
+      <Copyright>
+        Built with <span>❤</span> by{" "}
+        <a
+          href="https://twitter.com/hassan_thewhale"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Hassan_TheWhale
+        </a>
+      </Copyright>
     </>
   );
 }
