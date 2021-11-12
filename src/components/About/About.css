@@ -1,0 +1,12 @@
+.about {
+  height: 100vh;
+}
+
+.about hr {
+  border: 1px solid white;
+  width: 100%;
+}
+
+.about img.profilePic {
+  border-radius: 50%;
+}

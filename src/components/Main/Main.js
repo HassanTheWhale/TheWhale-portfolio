@@ -15,7 +15,7 @@ function Main(props) {
           delaySpeed={2000}
         />
       </h1>
-      <img src={props.image} className="logo" alt="logo" />
+      <img src={props.image} className="logo img-fluid" alt="logo" />
     </section>
   );
 }
