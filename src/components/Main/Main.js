@@ -1,9 +1,13 @@
 import { Typewriter } from "react-simple-typewriter";
+import { Button } from "react-bootstrap";
 import "./Main.css";
 
 function Main(props) {
   return (
-    <section className="main d-flex justify-content-center align-items-center flex-column text-white">
+    <section
+      className="main container my-5 py-5 d-flex justify-content-center align-items-center flex-column text-white"
+      id={props.id}
+    >
       <h1>
         <Typewriter
           words={props.words}
@@ -15,7 +19,19 @@ function Main(props) {
           delaySpeed={2000}
         />
       </h1>
-      <img src={props.image} className="logo img-fluid" alt="logo" />
+
+      <img src={props.image} className="img-fluid mt-5" alt="logo" />
+
+      <Button
+        className="mt-5 d-none d-md-block"
+        variant="outline-info"
+        size="lg"
+        onClick={() => {
+          props.nextBtnFunction(props.next);
+        }}
+      >
+        See Next
+      </Button>
     </section>
   );
 }

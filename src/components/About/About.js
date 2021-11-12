@@ -1,15 +1,29 @@
+import { Button } from "react-bootstrap";
 import "./About.css";
 
 function About(props) {
   return (
     <section
-      className="about d-flex justify-content-center align-items-center flex-column text-white"
+      className="about d-flex my-5 py-5 justify-content-center align-items-center flex-column text-white"
       data-aos="zoom-in"
       data-aos-delay="100"
+      id={props.id}
     >
       <div className="container">
-        <h1 className="mb-0">{props.title}</h1>
-        <hr className="mt-1 mb-5" />
+        <div className="d-flex justify-content-between align-items-center">
+          <h1 className="mb-0 mt-5">{props.title}</h1>
+          <Button
+            className="d-none d-md-block mt-5"
+            variant="outline-info"
+            size="lg"
+            onClick={() => {
+              props.nextBtnFunction(props.next);
+            }}
+          >
+            Know More!
+          </Button>
+        </div>
+        <hr className="mt-2 mb-5" />
 
         <div className="row">
           <div className="col-md-6 mb-md-0 order-1 ">

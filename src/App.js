@@ -13,20 +13,33 @@ import "./App.css";
 
 function App() {
   let words = ["Hassan", "The Whale", "Hassan - The Whale"];
-
   useEffect(() => {
+    document.getElementById("main").scrollIntoView(false);
     Aos.init();
   }, []);
 
+  let changeSection = (x) => {
+    document.getElementById(x).scrollIntoView(true);
+  };
+
   return (
     <>
-      <section id="element1">
-        <Main image={logo} words={words} />
-      </section>
+      <Main
+        image={logo}
+        words={words}
+        id="main"
+        next="about"
+        nextBtnFunction={changeSection}
+      />
 
-      <section id="element2">
-        <About title="Who am I?" text="Hello World!" image={profilePic} />
-      </section>
+      <About
+        title="Who am I?"
+        text="Hello World!"
+        image={profilePic}
+        id="about"
+        next="main"
+        nextBtnFunction={changeSection}
+      />
     </>
   );
 }

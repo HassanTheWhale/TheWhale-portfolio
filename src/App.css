@@ -3,7 +3,7 @@
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;
-  overflow-y: scroll;
+  overflow-y: hidden;
   font-family: "Roboto", sans-serif;
   background-color: #1f293a;
   scroll-behavior: smooth;
@@ -11,4 +11,10 @@ body {
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    overflow-y: auto;
+  }
 }
