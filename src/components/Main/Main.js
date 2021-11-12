@@ -5,7 +5,7 @@ import "./Main.css";
 function Main(props) {
   return (
     <section
-      className="main container my-5 py-5 d-flex justify-content-center align-items-center flex-column text-white"
+      className="main container d-flex justify-content-center align-items-center flex-column text-white"
       id={props.id}
     >
       <h1>
