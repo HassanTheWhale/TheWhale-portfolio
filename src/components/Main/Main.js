@@ -8,7 +8,7 @@ function Main(props) {
       className="main container d-flex justify-content-center align-items-center flex-column text-white"
       id={props.id}
     >
-      <h1>
+      <h1 className="mb-4">
         <Typewriter
           words={props.words}
           loop={-1}
@@ -20,10 +20,10 @@ function Main(props) {
         />
       </h1>
 
-      <img src={props.image} className="img-fluid mt-5" alt="logo" />
+      <img src={props.image} className="img-fluid my-5" alt="logo" />
 
       <Button
-        className="mt-5 d-none d-md-block"
+        className="mt-5"
         variant="outline-info"
         size="lg"
         onClick={() => {

@@ -13,9 +13,9 @@ function About(props) {
         <div className="d-flex justify-content-between align-items-center">
           <h1 className="mb-0 mt-5">{props.title}</h1>
           <Button
-            className="d-none d-md-block mt-5"
+            className="mt-5"
             variant="outline-info"
-            size="lg"
+            size="md"
             onClick={() => {
               props.nextBtnFunction(props.next);
             }}
