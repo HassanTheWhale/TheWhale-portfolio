@@ -1,0 +1,16 @@
+.main {
+  height: 100vh;
+}
+
+.main .logo {
+  animation: logo-spin infinite 50s linear;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
